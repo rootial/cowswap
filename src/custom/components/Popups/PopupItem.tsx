@@ -8,6 +8,11 @@ export const Wrapper = styled(PopupItemUni)`
     border: 2px solid ${({ theme }) => theme.black};
     box-shadow: 2px 2px 0 ${({ theme }) => theme.black};
 
+    ${({ theme }) => theme.mediaWidth.upToSmall`
+      box-shadow: none;
+      margin: 0 0 8px;
+    `}
+
     ${Fader} {
       background-color: ${({ theme }) => theme.disabled};
       height: 4px;

@@ -17,9 +17,22 @@ const MobilePopupWrapper = styled.div<{ height: string | number }>`
   ${({ theme }) => theme.mediaWidth.upToSmall`
     display: block;
   `};
+
+  position: fixed; // mod
+  z-index: 99; // mod
+  bottom: 78px; // mod
+  margin: 0 10px; // mod
+
+  ${({ theme }) => theme.mediaWidth.upToSmall`
+    width: calc(100% - 20px);
+  `};
 `
 
 const MobilePopupInner = styled.div`
+  ${({ theme }) => theme.mediaWidth.upToSmall`
+  flex-flow: column wrap;
+  `}; // mod
+
   height: 99%;
   overflow-x: auto;
   overflow-y: hidden;
